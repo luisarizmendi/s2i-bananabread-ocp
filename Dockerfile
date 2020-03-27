@@ -24,10 +24,6 @@ RUN apt update
 RUN apt install -y libsdl-*
 RUN apt install -y libsdl2-*
 
-
-ln -s /usr/local/include/SDL/SDL_image.h SDL_image.h
-ln -s /usr/local/include/SDL/SDL_mixer.h /usr/include/SDL2/SDL_image.h
-
 # TODO (optional): Copy the builder files into /opt/app-root
 # COPY ./<builder_folder>/ /opt/app-root/
 
