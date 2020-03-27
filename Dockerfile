@@ -17,8 +17,8 @@ LABEL io.k8s.description="Platform for building Bananabread game" \
 
 
 #install sdl2
-RUN apt-get update &&
-    apt-get install -y libsdl2-dev
+RUN apt-get update
+RUN apt-get install -y libsdl2-dev
     
 
 
