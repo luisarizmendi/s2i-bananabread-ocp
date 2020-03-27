@@ -16,6 +16,7 @@ LABEL io.k8s.description="Platform for building Bananabread game" \
 #RUN yum install -y rubygems && yum clean all -y
 #RUN gem install asdf
 
+ARG DEBIAN_FRONTEND=noninteractive
 
 #install sdl2
 RUN apt update
