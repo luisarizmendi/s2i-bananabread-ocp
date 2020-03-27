@@ -1,4 +1,5 @@
 # bananabread-ocp
+#FROM ubuntu:18.04
 FROM trzeci/emscripten-ubuntu
 
 ENV BUILDER_VERSION 1.0
@@ -17,11 +18,11 @@ LABEL io.k8s.description="Platform for building Bananabread game" \
 
 
 #install sdl2
-RUN apt-get update
-RUN apt-get install -y libsdl2-dev
+RUN apt update
+#RUN apt install -y emscripten
+RUN apt install -y libsdl2-dev
+RUN apt install -y libsdl2-image-dev
     
-
-
 
 # TODO (optional): Copy the builder files into /opt/app-root
 # COPY ./<builder_folder>/ /opt/app-root/
