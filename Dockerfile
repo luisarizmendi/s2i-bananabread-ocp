@@ -20,9 +20,12 @@ LABEL io.k8s.description="Platform for building Bananabread game" \
 #install sdl2
 RUN apt update
 #RUN apt install -y emscripten
-RUN apt install -y libsdl2-dev
-RUN apt install -y libsdl2-image-dev
-    
+RUN apt install -y libsdl-*
+RUN apt install -y libsdl2-*
+
+
+ln -s /usr/local/include/SDL/SDL_image.h SDL_image.h
+ln -s /usr/local/include/SDL/SDL_mixer.h /usr/include/SDL2/SDL_image.h
 
 # TODO (optional): Copy the builder files into /opt/app-root
 # COPY ./<builder_folder>/ /opt/app-root/
