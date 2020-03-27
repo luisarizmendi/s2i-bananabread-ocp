@@ -5,10 +5,10 @@ FROM trzeci/emscripten
 ENV BUILDER_VERSION 1.0
 
 # TODO: Set labels used in OpenShift to describe the builder image
-#LABEL io.k8s.description="Platform for building xyz" \
-#      io.k8s.display-name="builder x.y.z" \
-#      io.openshift.expose-services="8080:http" \
-#      io.openshift.tags="builder,x.y.z,etc."
+LABEL io.k8s.description="Platform for building Bananabread game" \
+      io.k8s.display-name="builder 1.0.0" \
+      io.openshift.expose-services="8080:http" \
+      io.openshift.tags="builder,1.0.0,bananabread."
 
 # TODO: Install required packages here:
 # RUN yum install -y ... && yum clean all -y
