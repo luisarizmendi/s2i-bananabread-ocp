@@ -8,7 +8,7 @@ ENV BUILDER_VERSION 1.0
 LABEL io.k8s.description="Platform for building Bananabread game" \
       io.k8s.display-name="builder 1.0.0" \
       io.openshift.expose-services="8080:http" \
-      io.openshift.tags="builder,1.0.0,bananabread."
+      io.openshift.tags="builder,1.0.0,bananabread"
 
 # TODO: Install required packages here:
 # RUN yum install -y ... && yum clean all -y
@@ -23,10 +23,10 @@ LABEL io.k8s.description="Platform for building Bananabread game" \
 COPY ./s2i/bin/ /usr/libexec/s2i
 
 # TODO: Drop the root user and make the content of /opt/app-root owned by user 1001
-#RUN chown -R 1001:1001 /opt/app-root
+RUN chown -R 1001:1001 .
 
 # This default user is created in the openshift/base-centos7 image
-#USER 1001
+USER 1001
 
 # TODO: Set the default port for applications built using this image
 EXPOSE 8080
